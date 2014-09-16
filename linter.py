@@ -19,10 +19,6 @@ class Dscanner(Linter):
 
     syntax = 'd'
     cmd = 'dscanner -S'
-    executable = None
-    version_args = '--version'
-    version_re = r'^.*(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 0.1.0'
     regex = r'^.+?\((?P<line>\d+):(?P<col>\d+)\)\[((?P<warning>warn)|(?P<error>error))\]: (?P<message>.+)$'
     multiline = False
     line_col_base = (1, 1)
